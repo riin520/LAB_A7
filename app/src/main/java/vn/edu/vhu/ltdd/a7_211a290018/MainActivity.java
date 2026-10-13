@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
     /** Mẫu chuẩn 3 nhánh Google khuyến nghị. */
     private void kiemTraRoiChup() {
-
+        registerForActivityResult(new ActivityResultContracts.RequestPermission(), r -> {});
         int trangThai = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
         if (trangThai == PackageManager.PERMISSION_GRANTED) {
             // Nhánh 1: đã có quyền → dùng ngay
